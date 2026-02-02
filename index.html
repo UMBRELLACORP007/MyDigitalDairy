@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Digital Diary – Login</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,22 +13,49 @@
   <div class="container">
 
     <div class="left">
-      <h1 class="title">My Digital Diary</h1>
+      <div class="brand">
+        <h1 class="title">My Digital Diary</h1>
+        <p class="subtitle">A calm space to write, remember, and breathe.</p>
+      </div>
 
       <div class="old-ids">
-        <h3>Old Accounts</h3>
+        <h3>Accounts</h3>
         <ul id="oldUserList"></ul>
+        <p class="hint">Tip: Click a username to autofill.</p>
+      </div>
+
+      <div class="theme-row">
+        <button id="themeToggle" class="ghost-btn" type="button">🌙 Dark Mode</button>
       </div>
     </div>
 
     <div class="right">
       <div class="login-box">
-        <h2>Login</h2>
 
-        <input type="text" id="username" placeholder="Username / ID" />
-        <input type="password" id="password" placeholder="Password" />
+        <div class="tabs">
+          <button class="tab active" id="tabLogin" type="button">Login</button>
+          <button class="tab" id="tabRegister" type="button">Register</button>
+        </div>
 
-        <button id="loginBtn">Login</button>
+        <!-- LOGIN -->
+        <div id="loginPanel">
+          <h2>Welcome back</h2>
+          <input type="text" id="loginUsername" placeholder="Username" />
+          <input type="password" id="loginPassword" placeholder="Password" />
+          <button id="loginBtn">Login</button>
+          <p class="mini" id="loginMsg"></p>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="registerPanel" class="hidden">
+          <h2>Create account</h2>
+          <input type="text" id="regUsername" placeholder="Username" />
+          <input type="password" id="regPassword" placeholder="Password" />
+          <input type="password" id="regConfirm" placeholder="Confirm password" />
+          <button id="registerBtn">Register</button>
+          <p class="mini" id="regMsg"></p>
+        </div>
+
       </div>
     </div>
 
