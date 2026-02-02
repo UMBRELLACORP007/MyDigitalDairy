@@ -1,0 +1,117 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  height: 100vh;
+  background: #f4f6fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  height: 520px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 55%;
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.old-ids {
+  margin-top: 35px;
+}
+
+.old-ids h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.old-ids ul {
+  list-style: none;
+}
+
+.old-ids li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.old-ids li:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 45%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 100%;
+}
+
+.login-box h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* LOGIN BUTTON */
+#loginBtn {
+  width: 100%;
+  padding: 14px;
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#loginBtn:hover {
+  background: #5a6edc;
+}
