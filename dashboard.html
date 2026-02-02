@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Digital Diary</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1 class="logo">My Digital Diary</h1>
+
+    <button id="newNoteBtn">+ New Note</button>
+
+    <nav class="nav">
+      <div class="nav-item active" data-view="all">All Notes</div>
+      <div class="nav-item" data-view="favorites">⭐ Favorites</div>
+      <div class="nav-item" data-view="archive">📦 Archive</div>
+    </nav>
+
+    <div class="section">
+      <p class="section-title">Categories</p>
+      <ul class="list" id="categoryList">
+        <li class="active" data-cat="Work">Work</li>
+        <li data-cat="Study">Study</li>
+        <li data-cat="Personal">Personal</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="content">
+
+    <!-- WELCOME BACK -->
+    <section class="welcome">
+      <h2>Welcome 👋</h2>
+      <p>Your private digital diary. Write without filters.</p>
+    </section>
+
+    <h3 id="viewTitle">All Notes</h3>
+
+    <div class="notes" id="notes"></div>
+  </main>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal hidden" id="noteModal">
+  <div class="modal-box">
+    <input type="text" id="noteTitle" placeholder="Give your note a title">
+
+    <input type="date" id="noteDate">
+
+    <select id="noteCategory">
+      <option value="Work">Work</option>
+      <option value="Study">Study</option>
+      <option value="Personal">Personal</option>
+    </select>
+
+    <textarea id="noteText" placeholder="Write your thoughts..."></textarea>
+
+    <div class="modal-actions">
+      <button id="favBtn">⭐</button>
+      <button id="archiveBtn">📦</button>
+      <button id="deleteBtn">🗑</button>
+      <button id="saveBtn">Save</button>
+      <button id="closeBtn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="./dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #f4f6fb;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #1e1e2f;
+  color: white;
+  padding: 24px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-left: 4px;
+}
+
+#newNoteBtn {
+  width: 100%;
+  padding: 12px;
+  background: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #4caf50;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #aaa;
+  margin: 16px 0 8px;
+}
+
+.list li {
+  padding: 10px;
+  background: #2a2a40;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.list li:hover {
+  background: #3a3a5a;
+  transform: translateX(4px);
+}
+
+.list li.active {
+  background: #4caf50;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.welcome {
+  margin-bottom: 18px;
+}
+
+.welcome h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.welcome p {
+  color: #666;
+}
+
+#viewTitle {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* NOTES */
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.note-card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+}
+
+.note-card small {
+  color: #777;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: white;
+  width: 420px;
+  padding: 22px;
+  border-radius: 14px;
+}
+
+/* CLEAN TITLE INPUT */
+.modal-box input[type="text"] {
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  outline: none;
+}
+
+.modal-box input[type="text"]:focus {
+  border-color: #667eea;
+}
+
+.modal-box input,
+.modal-box textarea,
+.modal-box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-box textarea {
+  height: 140px;
+  resize: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
